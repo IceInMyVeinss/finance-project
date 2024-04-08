@@ -14,4 +14,4 @@ const createCategories = async (req, res) => {
   res.json(result);
 };
 
-module.exports = { getCategories, createCategories };
+module.exports = { getCategories, createCategorie };

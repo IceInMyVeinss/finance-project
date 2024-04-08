@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/transactions", transactionRouter);
-app.use("/categories", categoryRouter);
+app.use("/categories", categoryRoutr);
 
 app.get("/", (req, res) => {
   res.send("hello world");

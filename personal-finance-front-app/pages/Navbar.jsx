@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import NavLogo from "@/components/NavLogo";
 
 export default function Navbar() {

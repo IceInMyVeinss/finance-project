@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from "axios";
 
 export function CategoryList() {
     const [categories, setCategories] = useState([]);

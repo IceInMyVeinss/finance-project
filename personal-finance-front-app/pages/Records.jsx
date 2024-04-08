@@ -8,6 +8,7 @@ export default function Records() {
   
   useEffect(() => {
     fetchTransactions();
+    console.log(transactions)
   },[]);
 
   function fetchTransactions() {
@@ -38,7 +39,7 @@ export default function Records() {
             </svg>
             <div className="flex flex-col">
               <div className="">Lending & Renting</div>
-              <div className="">14:00</div>
+              <div className="">14:0</div>
             </div>
           </div>
           <div className="flex-1">10000</div>

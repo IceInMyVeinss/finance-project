@@ -49,7 +49,7 @@ export default function Login() {
               <div className="flex gap-2">
                 <p>Don’t have account?</p>
                 <Link className="hover:text-blue-600" href="/SignUp">
-                  Sign up
+                  Sign upp
                 </Link>
               </div>
             </div>
