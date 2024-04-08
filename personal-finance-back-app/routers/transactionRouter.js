@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { sql } =require("../database/connectionToServer");
-const {getTransactions,} = require("../controllers/transactionController");
+const {getTransactions, createTransactions,} = require("../controllers/transactionController");
 
 router.get("/", getTransactions);
-// router.post("/", );
+router.post("/", createTransactions);
 
 module.exports = router;

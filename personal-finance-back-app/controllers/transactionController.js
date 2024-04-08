@@ -6,12 +6,12 @@ const getTransactions = async (req, res) => {
   res.json(result);
 };
 
-// const createTransactions = async (req, res) => {
-//   console.log({ req });
-//   const { categoryName, amount } = req.body;
-//   await sql`insert into transactions(id, amount, category_name) values(${Date.now()}, ${categoryName}), ${amount}`;
-//   res.json([{ status: "Success!!" }]);
-// };
+const createTransactions = async (req, res) => {
+  console.log({ req });
+  const { categoryName, amount } = req.body;
+  await sql`insert into transactions(id, amount, category_name) values(${Date.now()}, ${categoryName}), ${amount}`;
+  res.json([{ status: "Success!!" }]);
+};
 
 // router.put("/:id", async (req, res) => {
 //   const { id } = req.params;
@@ -26,4 +26,4 @@ const getTransactions = async (req, res) => {
 //   res.sendStatus(204);
 // });
 
-module.exports = { getTransactions, };
+module.exports = { getTransactions, createTransactions };

@@ -1,25 +1,21 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import RecordsNavigation from "@/components/RecordsNavigation";
 import RecordsCategoryList from "@/components/RecordsCategoryList";
-import NavLogo from "@/components/NavLogo";
+import Navbar from "./Navbar";
 
 export default function Records() {
   const [transactions, setTransactions] = useState([]);
   
+  useEffect(() => {
+    fetchTransactions();
+  },[]);
 
-  // useEffect(() => {
-  //   FetchTransactions();
-  // },[])
-
-  // const FetchTransactions = () => {
-  //   axios.get("http://localhost:3000/transactions").then((response) => {
-  //     setTransactions(response.data);
-  //     console.log(setTransactions);
-  //   })
-  // }
+  function fetchTransactions() {
+   fetch("http://localhost:4000/transactions").then((res) => res.json()).then((data) => setTransactions(data));
+  };
   return (
     <>
+      <Navbar />
       <div className="flex flex-row">
         <RecordsNavigation />
         <RecordsCategoryList />

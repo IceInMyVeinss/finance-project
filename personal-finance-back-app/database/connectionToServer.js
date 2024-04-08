@@ -1,4 +1,3 @@
-// app.js
 const postgres = require('postgres');
 require('dotenv').config();
 
@@ -10,8 +9,8 @@ const sql = postgres({
   username: PGUSER,
   password: PGPASSWORD,
   port: 5432,
-  ssl: "require",
-  connection: { 
+  ssl: 'require',
+  connection: {
     options: `project=${ENDPOINT_ID}`,
   },
 });

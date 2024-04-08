@@ -26,3 +26,7 @@ insert into transactions(id, amount, category_id) values('41', -1000, '1');
 select * from transactions left join categories on transactions.category_id = categories.id; 
 
 select transactions.id, amount, category_id, categories.name categories_name from transactions left join categories on transactions.category_id = categories.id; 
+
+SELECT column_name, data_type
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE table_name = 'users';
